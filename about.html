@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Garima Dhingra is a clinical nutritionist specializing in metabolic health, PCOS, hormonal balance, and structured nutrition care. Over 1100 individuals supported in doctor-led environments." /><title>About Garima Dhingra | Clinical Nutritionist | One Meal Apart</title>
+<meta name="description" content="Garima Dhingra is a clinical nutritionist specializing in metabolic health, PCOS, hormonal balance, and structured nutrition care. Over 1100 individuals supported in doctor-led environments." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Garima Dhingra | Clinical Nutritionist | One Meal Apart</title>
 
 <style>
 :root {
@@ -35,6 +37,7 @@ header .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header a {
@@ -108,6 +111,28 @@ footer a {
   color: var(--sage);
   text-decoration: none;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  header .wrap {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+}
 </style>
 </head>
 
@@ -115,7 +140,11 @@ footer a {
 
 <header>
   <div class="wrap">
-    <div style="font-size:18px; font-weight:500;">One Meal Apart</div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="images/oma-logo.png" alt="One Meal Apart Logo" style="height:38px;">
+      <div style="font-size:18px; font-weight:500;">One Meal Apart</div>
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="programs.html">Programs</a>
@@ -126,6 +155,13 @@ footer a {
 
 <section>
   <h1>About One Meal Apart</h1>
+
+  <div style="text-align:center; margin:35px 0;">
+    <img src="images/garima.jpeg"
+         alt="Garima Dhingra"
+         style="width:200px; height:200px; object-fit:cover; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+  </div>
+
   <p>
     One Meal Apart was founded and is led by Garima Dhingra, a clinical nutrition practitioner with over three years of professional experience in structured care environments.
   </p>
@@ -136,12 +172,19 @@ footer a {
 
 <section>
   <h2>Professional Background</h2>
+
   <p>
     Garima has worked extensively in structured clinical settings, supporting patients through personalized nutrition planning and long-term metabolic stabilization.
   </p>
   <p>
     Her foundation includes internship training at Medanta Medicity, Gurgaon, along with continuous independent practice focused on physiology-led nutrition care.
   </p>
+
+  <div style="text-align:center; margin:40px 0;">
+    <img src="images/garima-about.png"
+         alt="Garima Dhingra Medanta Case Presentation"
+         style="max-width:500px; width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+  </div>
 </section>
 
 <section>
@@ -181,8 +224,8 @@ footer a {
   <a href="index.html">Home</a> |
   <a href="programs.html">Programs</a> |
   <a href="disclaimer.html">Medical Disclaimer</a> |
-  <a href="https://instagram.com/onemealapart" target="_blank">Instagram</a>
-  | <a href="privacy.html">Privacy Policy</a>
+  <a href="https://instagram.com/onemealapart" target="_blank">Instagram</a> |
+  <a href="privacy.html">Privacy Policy</a>
 </footer>
 
 </body>

@@ -28,7 +28,7 @@
 
     header {
       background-color: #F9F8F3;
-      padding: 20px 40px;
+      padding: 20px;
       border-bottom: 1px solid #E5E7EB;
     }
 
@@ -36,6 +36,7 @@
       max-width: 1100px;
       margin: auto;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
     }
@@ -46,7 +47,7 @@
     }
 
     nav a {
-      margin-left: 25px;
+      margin-left: 20px;
       color: #4B5563;
     }
 
@@ -58,7 +59,7 @@
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 90px 24px;
+      padding: 80px 20px;
     }
 
     h1, h2 {
@@ -68,31 +69,37 @@
       text-align: center;
     }
 
-    h1 { font-size: 2.8rem; }
+    h1 { font-size: 2.4rem; }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
+    h2 { font-size: 1.8rem; }
 
     p {
-      font-size: 1.05rem;
+      font-size: 1rem;
       margin-bottom: 16px;
     }
 
     .duration {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--sage);
-      margin-top: 15px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .investment {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
       margin-bottom: 25px;
+      color: var(--text-dark);
     }
 
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 38px;
+      margin-top: 25px;
+      padding: 14px 32px;
       background-color: var(--sage);
       color: white;
       text-decoration: none;
@@ -106,10 +113,17 @@
     }
 
     .pathway {
-      margin-bottom: 60px;
-      padding: 40px;
+      margin-bottom: 50px;
+      padding: 35px;
       background-color: var(--offcream);
       border-radius: 12px;
+      text-align: center;
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: #777;
     }
 
     .cta-section {
@@ -125,8 +139,8 @@
 
     footer {
       text-align: center;
-      padding: 50px 20px;
-      font-size: 0.9rem;
+      padding: 40px 20px;
+      font-size: 0.85rem;
       color: #777;
     }
 
@@ -134,6 +148,27 @@
       color: var(--sage);
       text-decoration: none;
     }
+
+    /* Mobile improvements */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+      .pathway {
+        padding: 25px;
+      }
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
   </style>
 </head>
 
@@ -150,90 +185,105 @@
   </div>
 </header>
 
-  <!-- INTRO -->
-  <section>
-    <h1>Structured Care Pathways</h1>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Clear, guided nutrition programs designed to support weight management, PCOS, hormonal balance, gut comfort, and long-term metabolic clarity.
-      Each pathway is personalized while grounded in structured accountability.
-    </p>
-  </section>
+<!-- INTRO -->
+<section>
+  <h1>Structured Care Pathways</h1>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Clear, guided nutrition programs designed to support weight management, PCOS, hormonal balance, gut comfort, and long-term metabolic clarity.
+    Each pathway is personalized while grounded in structured accountability.
+  </p>
+</section>
 
-  <!-- PATHWAY 1 -->
-  <section class="pathway">
-    <h2>Metabolic Foundation</h2>
-    <div class="duration">4 Weeks</div>
-    <p>
-      For individuals navigating weight management, insulin resistance, energy crashes, or unstable blood sugar.
-    </p>
-    <p>
-      Focuses on stabilizing meals, improving protein structure, balancing fiber intake, and building sustainable food habits.
-    </p>
-  </section>
+<!-- 4 WEEK -->
+<section class="pathway">
+  <h2>Metabolic Foundation</h2>
+  <div class="duration">4 Weeks</div>
+  <div class="investment">Investment: ₹2,500</div>
 
-  <!-- PATHWAY 2 -->
-  <section class="pathway">
-    <h2>Hormonal & Gut Regulation</h2>
-    <div class="duration">8 Weeks</div>
-    <p>
-      Designed for PCOS, thyroid concerns, bloating, acidity, digestive discomfort, or hormonal irregularity.
-    </p>
-    <p>
-      Supports hormone rhythm, reduces inflammation load, and improves gut balance through structured nutrition.
-    </p>
-  </section>
+  <p>
+    For individuals navigating weight management, insulin resistance, energy crashes, or unstable blood sugar.
+  </p>
+  <p>
+    Focuses on stabilizing meals, improving protein structure, balancing fiber intake, and building sustainable food habits.
+  </p>
 
-  <!-- PATHWAY 3 -->
-  <section class="pathway">
-    <h2>Structured Performance & Lifestyle</h2>
-    <div class="duration">12 Weeks</div>
-    <p>
-      For professionals and individuals seeking sustained energy, metabolic stability, and structured long-term accountability.
-    </p>
-    <p>
-      Integrates nutrition alignment, stress resilience, recovery rhythm, and practical routine building.
-    </p>
-  </section>
+  <a href="#" class="btn" target="_blank">Enroll Now</a>
+  <div class="small-note">Have a Founding Circle code? Apply it at checkout.</div>
+</section>
 
-  <!-- WHAT'S INCLUDED -->
-  <section>
-    <h2>What Structured Care Includes</h2>
-    <p>• Initial clinical consultation</p>
-    <p>• Personalized nutrition plan</p>
-    <p>• Same-day structured plan delivery</p>
-    <p>• Weekly progress adjustments</p>
-    <p>• Lab report review (if applicable)</p>
-    <p>• Ongoing structured communication support</p>
-  </section>
+<!-- 8 WEEK -->
+<section class="pathway">
+  <h2>Hormonal & Gut Regulation</h2>
+  <div class="duration">8 Weeks</div>
 
-  <!-- CARE FLOW -->
-  <section>
-    <h2>Care Flow</h2>
-    <p><strong>Step 1:</strong> Book Consultation</p>
-    <p><strong>Step 2:</strong> Care pathway discussion & plan alignment</p>
-    <p><strong>Step 3:</strong> Structured plan delivery</p>
-    <p><strong>Step 4:</strong> Weekly progress refinement</p>
-  </section>
+  <p>
+    Designed for PCOS, thyroid concerns, bloating, acidity, digestive discomfort, or hormonal irregularity.
+  </p>
+  <p>
+    Supports hormone rhythm, reduces inflammation load, and improves gut balance through structured nutrition.
+  </p>
 
-  <!-- FINAL CTA -->
-  <section class="cta-section">
-    <h2>Begin With Structure</h2>
-    <p>If you're ready to move forward with clarity and structured guidance, begin here.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjaUuiXxjS_V5zLPXL4UrAd0RmS0_-bb4VxaNK95sdQU8KA/viewform" class="btn" style="background-color:white; color:var(--sage);">
-      Book Consultation
-    </a>
-  </section>
+  <div class="small-note">
+    Enrollment available after structured consultation.
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 One Meal Apart. All rights reserved. <br><br>
-    <a href="index.html">Home</a> |
-    <a href="https://instagram.com/onemealapart" target="_blank">Instagram</a>
-    | <a href="disclaimer.html">Medical Disclaimer</a>
-    | <a href="privacy.html">Privacy Policy</a>
-    | <a href="terms.html">Terms of Service</a>
+<!-- 12 WEEK -->
+<section class="pathway">
+  <h2>Structured Performance & Lifestyle</h2>
+  <div class="duration">12 Weeks</div>
+  <div class="investment">Investment: ₹5,500</div>
 
-  </footer>
+  <p>
+    For professionals and individuals seeking sustained energy, metabolic stability, and structured long-term accountability.
+  </p>
+  <p>
+    Integrates nutrition alignment, stress resilience, recovery rhythm, and practical routine building.
+  </p>
+
+  <a href="#" class="btn" target="_blank">Enroll Now</a>
+  <div class="small-note">Have a Founding Circle code? Apply it at checkout.</div>
+</section>
+
+<!-- CARE FLOW -->
+<section>
+  <h2>Care Flow</h2>
+  <p><strong>Option 1:</strong> Enroll directly into a structured pathway</p>
+  <p><strong>Option 2:</strong> Book a consultation for pathway discussion & alignment</p>
+  <p><strong>After Enrollment:</strong> Structured plan delivery and weekly refinement</p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <h2>Begin With Structure</h2>
+  <p>If you're ready to move forward with clarity and structured guidance, begin here.</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjaUuiXxjS_V5zLPXL4UrAd0RmS0_-bb4VxaNK95sdQU8KA/viewform"
+     class="btn"
+     style="background-color:white; color:var(--sage);"
+     target="_blank">
+    Book Consultation
+  </a>
+</section>
+
+<section style="text-align:center; padding:60px 20px; border-top:1px solid #E5E7EB;">
+  <h2 style="font-size:1.4rem;">Were You Part of the Launch Event?</h2>
+  <p style="max-width:600px; margin:20px auto;">
+    Launch attendees have received private enrollment access. 
+    If you were present and have questions about enrollment, reach out directly.
+  </p>
+  <p style="font-size:0.9rem; color:#777;">
+    Not part of the launch? Join our updates to stay informed about upcoming workshops and structured programs.
+  </p>
+</section>
+
+<footer>
+  © 2026 One Meal Apart. All rights reserved. <br><br>
+  <a href="index.html">Home</a> |
+  <a href="https://instagram.com/onemealapart" target="_blank">Instagram</a>
+  | <a href="disclaimer.html">Medical Disclaimer</a>
+  | <a href="privacy.html">Privacy Policy</a>
+  | <a href="terms.html">Terms of Service</a>
+</footer>
 
 </body>
 </html>

@@ -8,6 +8,7 @@
 <style>
 :root {
   --sage: #6B8E7D;
+  --sage-dark: #5F7F70;
   --cream: #F9F8F3;
   --text-dark: #1F2933;
   --text-body: #4B5563;
@@ -20,9 +21,10 @@ body {
   color: var(--text-body);
 }
 
+/* HEADER */
 header {
   background-color: #F9F8F3;
-  padding: 20px 40px;
+  padding: 20px;
   border-bottom: 1px solid #E5E7EB;
 }
 
@@ -30,8 +32,19 @@ header .wrap {
   max-width: 1100px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-wrap img {
+  height: 38px;
 }
 
 header a {
@@ -40,38 +53,72 @@ header a {
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 20px;
   color: #4B5563;
 }
 
+/* CONTENT */
 .container {
-  max-width: 600px;
-  margin: 120px auto;
+  max-width: 650px;
+  margin: 100px auto;
   text-align: center;
   padding: 20px;
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: var(--text-dark);
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
   line-height: 1.7;
+}
+
+.highlight {
+  color: var(--sage-dark);
+  font-weight: 500;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 32px;
+  margin-top: 25px;
+  padding: 12px 30px;
   background-color: var(--sage);
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--sage-dark);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header .wrap {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  h1 { font-size: 1.7rem; }
+  p { font-size: 1rem; }
+  .container { margin: 80px auto; }
 }
 </style>
 </head>
@@ -80,32 +127,37 @@ p {
 
 <header>
   <div class="wrap">
-    <div style="font-size:18px; font-weight:500;">One Meal Apart</div>
+    <div class="logo-wrap">
+      <img src="images/oma-logo.png" alt="One Meal Apart Logo">
+      <div style="font-size:18px; font-weight:500;">One Meal Apart</div>
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="programs.html">Programs</a>
+      <a href="about.html">About</a>
     </nav>
   </div>
 </header>
 
 <div class="container">
-  <h1>Application Received</h1>
+  <h1>Enrollment Received</h1>
 
   <p>
-    Thank you for taking the time to complete the structured care form.
+    Your submission has been successfully received.
   </p>
 
   <p>
-    Your responses will be reviewed personally.  
-    You can expect a response within 24–48 hours.
+    If you completed a program enrollment, your payment has been recorded.
+    You will receive a <span class="highlight">WhatsApp confirmation shortly</span> with the next steps.
   </p>
 
   <p>
-    If you'd like to stay connected meanwhile, you may follow along on Instagram.
+    If you submitted a consultation form, your responses will be reviewed personally within 24–48 hours.
   </p>
 
-  <a href="https://instagram.com/onemealapart" target="_blank" class="btn">
-    Visit Instagram
+  <a href="programs.html" class="btn">
+    View Structured Pathways
   </a>
 </div>
 
