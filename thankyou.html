@@ -98,27 +98,33 @@ p {
   background-color: var(--sage-dark);
 }
 
-/* MOBILE */
+/* Mobile improvements */
 @media (max-width: 768px) {
-  header .wrap {
-    flex-direction: column;
-    gap: 15px;
+
+  section {
+    padding: 40px 18px;
   }
 
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 10px;
   }
 
   nav a {
-    margin: 5px 10px;
+    margin-left: 10px;
     font-size: 0.9rem;
   }
 
-  h1 { font-size: 1.7rem; }
-  p { font-size: 1rem; }
-  .container { margin: 80px auto; }
+  .pathway {
+    padding: 25px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 </style>
 </head>
