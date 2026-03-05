@@ -58,7 +58,7 @@ nav a.cta {
 section {
   max-width: 1000px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 55px 20px;
 }
 
 h1, h2 {
@@ -68,16 +68,42 @@ h1, h2 {
   text-align: center;
 }
 
-h1 { font-size: 2.8rem; }
+h1 { font-size: 2.6rem; }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
+  font-size: 1.9rem;
+  margin-bottom: 30px;
 }
 
 p {
-  font-size: 1.1rem;
-  margin-bottom: 18px;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.leadership-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:30px;
+}
+
+.leader{
+  text-align:center;
+}
+
+.leader img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom:15px;
+}
+
+.role{
+  font-size:0.95rem;
+  color:#666;
+  margin-bottom:10px;
 }
 
 .cta-section {
@@ -102,7 +128,7 @@ p {
 
 footer {
   text-align: center;
-  padding: 50px 20px;
+  padding: 45px 20px;
   font-size: 0.9rem;
   color: #777;
 }
@@ -119,8 +145,8 @@ footer a {
     padding: 40px 18px;
   }
 
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.5rem; }
 
   nav {
     margin-top: 10px;
@@ -131,14 +157,10 @@ footer a {
     font-size: 0.9rem;
   }
 
-  .pathway {
-    padding: 25px;
+  .leadership-grid{
+    grid-template-columns:1fr;
   }
 
-  .btn {
-    width: 100%;
-    max-width: 300px;
-  }
 }
 </style>
 </head>
@@ -163,17 +185,16 @@ footer a {
 <section>
   <h1>About One Meal Apart</h1>
 
-  <div style="text-align:center; margin:35px 0;">
-    <img src="images/garima.jpeg"
-         alt="Garima Dhingra"
-         style="width:200px; height:200px; object-fit:cover; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
-  </div>
+  <p>
+    One Meal Apart was founded by Garima Dhingra to bring structured, clinically grounded nutrition care to individuals seeking sustainable metabolic health.
+  </p>
 
   <p>
-    One Meal Apart was founded and is led by Garima Dhingra, a clinical nutrition practitioner with over three years of professional experience in structured care environments.
+    The practice was built around a simple philosophy: health rarely changes through extremes — it changes through structure, clarity, and consistent guidance.
   </p>
+
   <p>
-    She has supported more than 1100 individuals within doctor-led healthcare models, working across metabolic health, hormonal regulation, digestive support, and sustainable weight management.
+    Over the past several years, Garima has supported more than 1100 individuals within doctor-led healthcare environments, helping patients navigate metabolic health, hormonal balance, digestive concerns, and sustainable weight management.
   </p>
 </section>
 
@@ -181,43 +202,71 @@ footer a {
   <h2>Professional Background</h2>
 
   <p>
-    Garima has worked extensively in structured clinical settings, supporting patients through personalized nutrition planning and long-term metabolic stabilization.
-  </p>
-  <p>
-    Her foundation includes internship training at Medanta Medicity, Gurgaon, along with continuous independent practice focused on physiology-led nutrition care.
+    Garima’s foundation includes clinical exposure at Medanta Medicity, Gurgaon, along with years of practical experience supporting patients through structured nutrition planning and metabolic stabilization.
   </p>
 
-  <div style="text-align:center; margin:40px 0;">
+  <p>
+    Her work focuses on simplifying nutrition while maintaining scientific clarity — helping individuals build routines that are practical, sustainable, and physiologically aligned.
+  </p>
+
+  <div style="text-align:center; margin:30px 0;">
     <img src="images/garima-about.png"
          alt="Garima Dhingra Medanta Case Presentation"
-         style="max-width:500px; width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+         style="max-width:450px; width:100%; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
   </div>
 </section>
-
 <section>
-  <h2>Clinical Philosophy</h2>
-  <p>
-    One Meal Apart operates on a simple principle — health does not change through extremes, but through structure.
-  </p>
-  <p>
-    The focus remains on metabolic clarity, protein and fiber alignment, hormonal rhythm support, gut stability, and realistic lifestyle integration.
-  </p>
-  <p>
-    There is no crash dieting. No rigid restriction. No guilt-based coaching.
-  </p>
-  <p>
-    Instead, structured guidance designed to be sustainable.
-  </p>
+<h2>Research & Academic Exposure</h2>
+
+<p>
+Garima has participated in international academic collaboration programs under
+SPARC (Scheme for Promotion of Academic and Research Collaboration),
+a Government of India initiative connecting Indian institutions with global research centers.
+</p>
+
+<p>
+These programs included academic collaboration with the
+Institute for Protein Research, Osaka University (Japan),
+focusing on peptide science and nanotechnological therapeutic research.
+</p>
+
+<div style="display:flex; gap:30px; justify-content:center; flex-wrap:wrap; margin-top:30px;">
+
+<img src="images/sparc-course.jpg"
+style="max-width:420px; width:100%; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+
+<img src="images/sparc-workshop.jpg"
+style="max-width:420px; width:100%; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+
+</div>
 </section>
 
 <section>
-  <h2>Why “One Meal Apart”</h2>
-  <p>
-    The name reflects a core belief: meaningful health shifts begin with small, consistent decisions.
-  </p>
-  <p>
-    You are not years away from stability — you are often just one structured decision away.
-  </p>
+  <h2>Leadership</h2>
+
+  <div class="leadership-grid">
+
+    <div class="leader">
+      <img src="images/garima.jpeg" alt="Garima Dhingra">
+      <h3>Garima Dhingra</h3>
+      <div class="role">Founder & Clinical Lead</div>
+      <p>
+      Garima leads the clinical direction of One Meal Apart, focusing on metabolic health,
+      hormonal balance, and structured nutrition care rooted in physiology-based practice.
+      </p>
+    </div>
+
+    <div class="leader">
+      <img src="images/anisha.jpeg" alt="Anisha Dhingra">
+      <h3>Anisha Dhingra</h3>
+      <div class="role">Operations & Community Lead</div>
+      <p>
+      Anisha supports the operational structure and community experience within One Meal Apart,
+      helping ensure clients feel guided, supported, and connected throughout their care journey.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <section class="cta-section">
