@@ -1,296 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Structured Care Pathways | One Meal Apart</title>
-  <meta name="description" content="Structured nutrition pathways for weight management, PCOS, hormonal balance, and sustainable metabolic health." />
-  <link rel="icon" href="/favicon.ico" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    :root {
-      --sage: #6B8E7D;
-      --sage-dark: #5F7F70;
-      --cream: #F9F8F3;
-      --offcream: #F3F4EF;
-      --text-dark: #1F2933;
-      --text-body: #4B5563;
-    }
+<title>Structured Care Pathways | One Meal Apart</title>
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Georgia, serif;
-      background-color: var(--cream);
-      color: var(--text-body);
-      line-height: 1.7;
-    }
+<meta name="description" content="Structured nutrition pathways for weight management, PCOS, hormonal balance, and sustainable metabolic health." />
 
-    header {
-      background-color: #F9F8F3;
-      padding: 20px;
-      border-bottom: 1px solid #E5E7EB;
-    }
+<link rel="icon" href="/favicon.ico" />
 
-    header .wrap {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
+<style>
 
-    header a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    nav a {
-      margin-left: 20px;
-      color: #4B5563;
-    }
-
-    nav a.cta {
-      color: var(--sage);
-      font-weight: 500;
-    }
-
-    section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 60px 20px;
+:root {
+--sage:#6B8E7D;
+--sage-dark:#5F7F70;
+--cream:#F9F8F3;
+--offcream:#F3F4EF;
+--text-dark:#1F2933;
+--text-body:#4B5563;
 }
 
-    h1, h2 {
-      color: var(--text-dark);
-      font-weight: 500;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    h1 { font-size: 2.4rem; }
-
-    h2 { font-size: 1.8rem; }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-
-    .duration {
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-top: 10px;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    .investment {
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 25px;
-      color: var(--text-dark);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 32px;
-      background-color: var(--sage);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: var(--sage-dark);
-    }
-
-    .pathway {
-      margin-bottom: 50px;
-      padding: 35px;
-      background-color: var(--offcream);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .small-note {
-      font-size: 0.85rem;
-      margin-top: 10px;
-      color: #777;
-    }
-
-    .cta-section {
-      background-color: var(--sage);
-      color: white;
-      text-align: center;
-    }
-
-    .cta-section h2,
-    .cta-section p {
-      color: white;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.85rem;
-      color: #777;
-    }
-
-    footer a {
-      color: var(--sage);
-      text-decoration: none;
-    }
-
-    /* Mobile improvements */
-@media (max-width: 768px) {
-
-  section {
-    padding: 40px 18px;
-  }
-
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    margin-left: 10px;
-    font-size: 0.9rem;
-  }
-
-  .pathway {
-    padding: 25px;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 300px;
-  }
+body{
+margin:0;
+padding:0;
+font-family:Georgia,serif;
+background-color:var(--cream);
+color:var(--text-body);
+line-height:1.7;
 }
 
-  </style>
+header{
+background:#F9F8F3;
+padding:20px;
+border-bottom:1px solid #E5E7EB;
+}
+
+header .wrap{
+max-width:1100px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+}
+
+header a{
+text-decoration:none;
+color:inherit;
+}
+
+nav a{
+margin-left:20px;
+color:#4B5563;
+}
+
+nav a.cta{
+color:var(--sage);
+font-weight:500;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1,h2{
+color:var(--text-dark);
+font-weight:500;
+margin-bottom:20px;
+text-align:center;
+}
+
+h1{font-size:2.4rem;}
+h2{font-size:1.8rem;}
+
+p{
+font-size:1rem;
+margin-bottom:16px;
+}
+
+.duration{
+font-size:0.85rem;
+letter-spacing:1px;
+text-transform:uppercase;
+color:var(--sage);
+margin-top:10px;
+margin-bottom:15px;
+text-align:center;
+}
+
+.investment{
+text-align:center;
+font-size:1.2rem;
+font-weight:500;
+margin-bottom:25px;
+color:var(--text-dark);
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 32px;
+background-color:var(--sage);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:0.95rem;
+transition:0.3s ease;
+}
+
+.btn:hover{
+background-color:var(--sage-dark);
+}
+
+.pathway{
+margin-bottom:50px;
+padding:35px;
+background-color:var(--offcream);
+border-radius:12px;
+text-align:center;
+}
+
+.small-note{
+font-size:0.85rem;
+margin-top:10px;
+color:#777;
+}
+
+.cta-section{
+background-color:var(--sage);
+color:white;
+text-align:center;
+}
+
+.cta-section h2,
+.cta-section p{
+color:white;
+}
+
+footer{
+text-align:center;
+padding:40px 20px;
+font-size:0.85rem;
+color:#777;
+}
+
+footer a{
+color:var(--sage);
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+section{
+padding:40px 18px;
+}
+
+h1{font-size:1.8rem;}
+h2{font-size:1.4rem;}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+margin-left:10px;
+font-size:0.9rem;
+}
+
+.pathway{
+padding:25px;
+}
+
+.btn{
+width:100%;
+max-width:300px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="wrap">
-    <div style="font-size:18px; font-weight:500;">One Meal Apart</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjaUuiXxjS_V5zLPXL4UrAd0RmS0_-bb4VxaNK95sdQU8KA/viewform" class="cta">Book Consultation</a>
-    </nav>
-  </div>
+<div class="wrap">
+<div style="display:flex;align-items:center;gap:12px;">
+<img src="images/oma-logo.png" style="height:38px;">
+<div style="font-size:18px;font-weight:500;">One Meal Apart</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjaUuiXxjS_V5zLPXL4UrAd0RmS0_-bb4VxaNK95sdQU8KA/viewform" class="cta">Book Consultation</a>
+</nav>
+</div>
 </header>
 
 <!-- INTRO -->
+
 <section>
-  <h1>Structured Care Pathways</h1>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    Clear, guided nutrition programs designed to support weight management, PCOS, hormonal balance, gut comfort, and long-term metabolic clarity.
-    Each pathway is personalized while grounded in structured accountability.
-  </p>
+
+<h1>Structured Care Pathways</h1>
+
+<p style="text-align:center;max-width:800px;margin:auto;">
+Clear, guided nutrition programs designed to support weight management, PCOS, hormonal balance, gut comfort, and long-term metabolic clarity. Each pathway is personalized while grounded in structured accountability.
+</p>
+
 </section>
+
 
 <!-- 4 WEEK -->
+
 <section class="pathway">
-  <h2>Metabolic Foundation</h2>
-  <div class="duration">4 Weeks</div>
-  <div class="investment">₹2,500</div>
 
-  <p>
-    For individuals navigating weight management, insulin resistance, energy crashes, or unstable blood sugar.
-  </p>
-  <p>
-    Focuses on stabilizing meals, improving protein structure, balancing fiber intake, and building sustainable food habits.
-  </p>
+<h2>Metabolic Foundation</h2>
 
-  <a href="#" class="btn" target="_blank">Enroll Now</a>
-  <div class="small-note">Have a Founding Circle code? Apply it at checkout.</div>
+<div class="duration">4 Weeks</div>
+
+<div class="investment">₹2,500</div>
+
+<p>
+For individuals navigating weight management, insulin resistance, energy crashes, or unstable blood sugar.
+</p>
+
+<p>
+Focuses on stabilizing meals, improving protein structure, balancing fiber intake, and building sustainable food habits.
+</p>
+
+<a href="https://wa.me/916280207272?text=Hi%2C%20I%20attended%20the%20OMA%20launch%20event.%20I%20would%20like%20to%20use%20the%20OMA500%20credit." class="btn" target="_blank">
+Use Launch Credit
+</a>
+
+<div class="small-note">
+Launch attendees may use OMA500 credit until 15 March. Founding Circle members may apply their code during enrollment.
+</div>
+
 </section>
+
 
 <!-- 8 WEEK -->
+
 <section class="pathway">
-  <h2>Hormonal & Gut Regulation</h2>
-  <div class="duration">8 Weeks</div>
 
-  <p>
-    Designed for PCOS, thyroid concerns, bloating, acidity, digestive discomfort, or hormonal irregularity.
-  </p>
-  <p>
-    Supports hormone rhythm, reduces inflammation load, and improves gut balance through structured nutrition.
-  </p>
+<h2>Hormonal & Gut Regulation</h2>
 
-  <div class="small-note">
-    Enrollment available after structured consultation.
-  </div>
+<div class="duration">8 Weeks</div>
+
+<p>
+Designed for PCOS, thyroid concerns, bloating, acidity, digestive discomfort, or hormonal irregularity.
+</p>
+
+<p>
+Supports hormone rhythm, reduces inflammation load, and improves gut balance through structured nutrition.
+</p>
+
+<a href="https://wa.me/916280207272?text=Hi%2C%20I%20attended%20the%20OMA%20launch%20event.%20I%20would%20like%20to%20use%20the%20OMA500%20credit." class="btn" target="_blank">
+Use Launch Credit
+</a>
+
+<div class="small-note">
+Launch attendees may use OMA500 credit until 15 March. Founding Circle members may apply their code during enrollment.
+</div>
+
 </section>
+
 
 <!-- 12 WEEK -->
+
 <section class="pathway">
-  <h2>Structured Performance & Lifestyle</h2>
-  <div class="duration">12 Weeks</div>
-  <div class="investment">₹5,500</div>
 
-  <p>
-    For professionals and individuals seeking sustained energy, metabolic stability, and structured long-term accountability.
-  </p>
-  <p>
-    Integrates nutrition alignment, stress resilience, recovery rhythm, and practical routine building.
-  </p>
+<h2>Structured Performance & Lifestyle</h2>
 
-<div class="small-note">Launch attendees may use OMA500 credit until 15 March.</div>
+<div class="duration">12 Weeks</div>
+
+<div class="investment">₹5,500</div>
+
+<p>
+For professionals and individuals seeking sustained energy, metabolic stability, and structured long-term accountability.
+</p>
+
+<p>
+Integrates nutrition alignment, stress resilience, recovery rhythm, and practical routine building.
+</p>
+
+<a href="https://wa.me/916280207272?text=Hi%2C%20I%20attended%20the%20OMA%20launch%20event.%20I%20would%20like%20to%20use%20the%20OMA500%20credit." class="btn" target="_blank">
+Use Launch Credit
+</a>
+
+<div class="small-note">
+Launch attendees may use OMA500 credit until 15 March. Founding Circle members may apply their code during enrollment.
+</div>
+
 </section>
+
 
 <!-- CARE FLOW -->
+
 <section>
-  <h2>Care Flow</h2>
-  <p><strong>Step 1:</strong> Book a consultation</p>
-<p><strong>Step 2:</strong> Receive pathway recommendation based on your health goals</p>
-<p><strong>Step 3:</strong> Begin structured nutrition care with ongoing refinement</p>
+
+<h2>Care Flow</h2>
+
+<p><strong>Step 1:</strong> Book consultation or message us using your launch credit.</p>
+
+<p><strong>Step 2:</strong> We review your health goals and recommend the right pathway.</p>
+
+<p><strong>Step 3:</strong> Your structured nutrition program begins with guided support.</p>
+
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-section">
-  <h2>Begin With Structure</h2>
-  <p>If you're ready to move forward with clarity and structured guidance, begin here.</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjaUuiXxjS_V5zLPXL4UrAd0RmS0_-bb4VxaNK95sdQU8KA/viewform"
-     class="btn"
-     style="background-color:white; color:var(--sage);"
-     target="_blank">
-    Book Consultation
-  </a>
+
+<!-- LAUNCH SECTION -->
+
+<section style="text-align:center;padding:60px 20px;border-top:1px solid #E5E7EB;">
+
+<h2 style="font-size:1.4rem;">Launch Attendees</h2>
+
+<p style="max-width:600px;margin:20px auto;">
+If you attended the OMA launch event, you may activate your OMA500 credit before 15 March.
+</p>
+
+<a href="https://wa.me/916280207272?text=Hi%2C%20I%20attended%20the%20OMA%20launch%20event.%20I%20would%20like%20to%20use%20the%20OMA500%20credit." class="btn" target="_blank">
+Use Launch Credit
+</a>
+
 </section>
 
-<section style="text-align:center; padding:60px 20px; border-top:1px solid #E5E7EB;">
-  <h2 style="font-size:1.4rem;">Were You Part of the Launch Event?</h2>
-  <p style="max-width:600px; margin:20px auto;">
-    Launch attendees have received private enrollment access. 
-    If you were present and have questions about enrollment, reach out directly.
-  </p>
-  <p style="font-size:0.9rem; color:#777;">
-    Not part of the launch? Join our updates to stay informed about upcoming workshops and structured programs.
-  </p>
-</section>
 
 <footer>
-  © 2026 One Meal Apart. All rights reserved. <br><br>
-  <a href="index.html">Home</a> |
-  <a href="https://instagram.com/onemealapart" target="_blank">Instagram</a>
-  | <a href="disclaimer.html">Medical Disclaimer</a>
-  | <a href="privacy.html">Privacy Policy</a>
-  | <a href="terms.html">Terms of Service</a>
+
+© 2026 One Meal Apart. All rights reserved. <br><br>
+
+<a href="index.html">Home</a> |
+<a href="https://instagram.com/onemealapart" target="_blank">Instagram</a> |
+<a href="disclaimer.html">Medical Disclaimer</a> |
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms of Service</a>
+
 </footer>
 
 </body>
