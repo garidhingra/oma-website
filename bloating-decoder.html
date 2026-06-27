@@ -173,6 +173,35 @@ options: [
 "Less than 3 times a week",
 "More than once a day"
 ]
+},
+{
+question: "What usually worsens your bloating?",
+options: [
+"Dairy",
+"Lentils / beans",
+"Gluten-heavy meals",
+"Stress",
+"I can't identify a trigger"
+]
+},
+{
+question: "Which symptom do you experience most often along with bloating?",
+options: [
+"Constipation",
+"Loose stools",
+"Acidity",
+"Burping",
+"Cramps"
+]
+},
+{
+question: "Does your bloating change around your menstrual cycle?",
+options: [
+"Yes",
+"No",
+"Unsure",
+"Not applicable"
+]
 }
 ];
 
@@ -256,22 +285,47 @@ function submitToGoogle() {
     showSummary();
 }
 
+
 function showSummary() {
     let pattern = "";
     let guidance = "";
 
-    if (answers.includes("After meals")) {
-        pattern = "Meal-linked fermentation pattern";
-        guidance = "Focus on meal pacing, chewing, and reducing common digestive triggers.";
-    } else if (answers.includes("By evening")) {
-        pattern = "Slow digestive motility pattern";
-        guidance = "Support meal spacing, hydration, and bowel regularity.";
-    } else {
-        pattern = "Hormone and rhythm-linked bloating pattern";
-        guidance = "Track symptoms around stress, sleep, and menstrual phases.";
+    if (
+        answers.includes("After meals") ||
+        answers.includes("Dairy") ||
+        answers.includes("Lentils / beans") ||
+        answers.includes("Burping") ||
+        answers.includes("Acidity")
+    ) {
+        pattern = "Fermentation-linked bloating pattern";
+        guidance = "Review trigger foods, meal pace, and digestive load.";
     }
 
-    document.getElementById("question-card").innerHTML = `
+    else if (
+        answers.includes("By evening") ||
+        answers.includes("Less than 3 times a week") ||
+        answers.includes("Constipation") ||
+        answers.includes("Cramps")
+    ) {
+        pattern = "Slow motility-linked bloating pattern";
+        guidance = "Support bowel rhythm, hydration, and meal spacing.";
+    }
+
+    else if (
+        answers.includes("Around my periods") ||
+        answers.includes("Yes") ||
+        answers.includes("Stress")
+    ) {
+        pattern = "Hormonal and rhythm-linked bloating pattern";
+        guidance = "Observe cycle trends, stress load, and recovery habits.";
+    }
+
+    else {
+        pattern = "Mixed digestive pattern";
+        guidance = "Your symptoms may involve multiple overlapping contributors.";
+    }
+
+document.getElementById("question-card").innerHTML = `
         <h2>Your OMA Symptom Summary</h2>
 
         <p><strong>Possible pattern:</strong> ${pattern}</p>
