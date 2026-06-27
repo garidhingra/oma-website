@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMA | Metabolic Red Flag Score</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: #F9F8F3;
+    font-family: Georgia, serif;
+    color: #4B5563;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    padding: 90px 24px;
+    text-align: center;
+}
+
+.logo {
+    height: 24px;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #2D4A3E;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 28px;
+    background: #2D4A3E;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 400;
+}
+
+.card {
+    margin-top: 55px;
+    background: white;
+    padding: 36px;
+    border-radius: 24px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+    font-family: Georgia, serif;
+    color: #2D4A3E;
+    margin-bottom: 20px;
+}
+
+.card p {
+    line-height: 1.9;
+}
+
+.note {
+    margin-top: 28px;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<img src="images/oma-logo.png" class="logo">
+
+<h1>Understand Your Metabolic Patterns</h1>
+
+<p class="subtitle">
+A guided symptom-based nutrition assessment designed to help you explore
+possible digestive, food, and lifestyle patterns that may be contributing
+to bloating.
+</p>
+
+<a href="#" class="button">Start Assessment</a>
+
+<div class="card">
+<h2>What your score explores</h2>
+
+<p>
+• A symptom-pattern summary based on your responses<br><br>
+• Educational insights into possible digestive and lifestyle contributors<br><br>
+• Practical metabolic shifts aligned with OMA principles
+</p>
+</div>
+
+<p class="note">
+This assessment is intended for educational purposes only and does not provide medical diagnosis or treatment.
+Please consult a qualified healthcare provider for persistent symptoms.
+</p>
+
+
+<div class="card" id="question-card" style="display:none;">
+<h2>Question 1 of 5</h2>
+
+<p><strong>When do you usually feel bloated?</strong></p>
+
+<div class="options">
+<button>After meals</button>
+<button>By evening</button>
+<button>On waking up</button>
+<button>Around my periods</button>
+<button>Most of the day</button>
+</div>
+</div>
+
+<style>
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.options button {
+    padding: 16px;
+    border: 1px solid #D9DED7;
+    background: #fff;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+.options button:hover {
+    background: #F3F5F0;
+    border-color: #2D4A3E;
+}
+</style>
+
+</div>
+
+<script>
+
+const questions = [
+{
+question: "How is your energy through the day?",
+options: [
+"Stable most of the day",
+"Crash after lunch",
+"Exhausted by evening",
+"Need caffeine to function"
+]
+},
+{
+question: "How often do you feel hungry?",
+options: [
+"Every 3-4 hours",
+"Constant snacking",
+"Strong cravings at night",
+"I often forget meals"
+]
+},
+{
+question: "What best describes your current body response?",
+options: [
+"Weight stable",
+"Gaining despite eating carefully",
+"Losing very slowly",
+"Weight fluctuates often"
+]
+},
+{
+question: "How do you usually wake up?",
+options: [
+"Refreshed",
+"Tired",
+"Groggy",
+"Anxious"
+]
+},
+{
+question: "How is your digestion lately?",
+options: [
+"Regular",
+"Metabolic Stress",
+"Constipation",
+"Acidity"
+]
+},
+{
+question: "Do you experience any of these regularly?",
+options: [
+"Irregular periods",
+"Hairfall",
+"Acne",
+"PMS",
+"None"
+]
+}
+];
+
+
+let currentQuestion = 0;
+let answers = [];
+
+function renderQuestion() {
+    
+const card = document.getElementById("question-card");
+card.style.display = "block";
+
+
+    const q = questions[currentQuestion];
+
+    card.innerHTML = `
+        <h2>Question ${currentQuestion + 1} of ${questions.length}</h2>
+        <p><strong>${q.question}</strong></p>
+        <div class="options">
+            ${q.options.map(option => `
+                <button onclick="selectAnswer('${option}')">${option}</button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function selectAnswer(answer) {
+    answers.push(answer);
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        renderQuestion();
+    } else {
+        document.getElementById("question-card").innerHTML = `
+            <h2>Your assessment is ready</h2>
+            <p>Enter your details to receive your symptom summary and first-step guidance.</p>
+
+            <div class="options">
+                <input type="text" placeholder="Your Name" style="padding:14px;border:1px solid #ddd;border-radius:12px;">
+                <input type="email" placeholder="Email Address (Optional)" style="padding:14px;border:1px solid #ddd;border-radius:12px;">
+                <input type="text" required placeholder="WhatsApp Number *" style="padding:14px;border:1px solid #ddd;border-radius:12px;">
+                
+<button onclick="submitToGoogle()">Get My Summary</button>
+
+            </div>
+        `;
+    }
+}
+
+window.onload = renderQuestion;
+</script>
+
+
+<script>
+function submitToGoogle() {
+    const name = document.querySelector('input[placeholder="Your Name"]').value;
+    const whatsapp = document.querySelector('input[placeholder="WhatsApp Number *"]').value;
+
+    if (!name || !whatsapp) {
+        alert("Please fill your name and WhatsApp number.");
+        return;
+    }
+
+    const pattern = answers.includes("After meals")
+        ? "Meal-linked fermentation pattern"
+        : answers.includes("By evening")
+        ? "Slow digestive motility pattern"
+        : "Hormone and rhythm-linked bloating pattern";
+
+    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSfP0xAPXohMyLS_xd51J8lLmyn2Rqe9ly8uk0HPMEWUUC6RNA/formResponse";
+
+    const formData = new FormData();
+    formData.append("entry.2073016579", name);
+    formData.append("entry.636291043", whatsapp);
+    formData.append("entry.733801969", "Metabolic Red Flag Score");
+    formData.append("entry.128895036", pattern);
+
+    fetch(formURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+    });
+
+    showSummary();
+}
+
+
+
+function showSummary() {
+    let pattern = "";
+    let guidance = "";
+
+    if (
+        answers.includes("Crash after lunch") ||
+        answers.includes("Constant snacking") ||
+        answers.includes("Strong cravings at night")
+    ) {
+        pattern = "Blood sugar dysregulation pattern";
+        guidance = "Your current responses suggest unstable energy regulation and meal rhythm disruption.";
+    }
+
+    else if (
+        answers.includes("Exhausted by evening") ||
+        answers.includes("Need caffeine to function") ||
+        answers.includes("Anxious")
+    ) {
+        pattern = "Stress-linked metabolic resistance pattern";
+        guidance = "Your body may be carrying a higher physiological stress load affecting recovery and metabolism.";
+    }
+
+    else if (
+        answers.includes("Gaining despite eating carefully") ||
+        answers.includes("Losing very slowly") ||
+        answers.includes("Weight fluctuates often")
+    ) {
+        pattern = "Slow adaptive metabolism pattern";
+        guidance = "Your metabolism may be showing adaptive resistance influenced by meal timing, stress or recovery load.";
+    }
+
+    else if (
+        answers.includes("Irregular periods") ||
+        answers.includes("Hairfall") ||
+        answers.includes("Acne") ||
+        answers.includes("PMS")
+    ) {
+        pattern = "Hormonal-metabolic disruption pattern";
+        guidance = "Your current responses may reflect deeper hormone-metabolism interactions requiring structured support.";
+    }
+
+    else {
+        pattern = "Mixed metabolic stress pattern";
+        guidance = "Your responses suggest overlapping metabolic signals that may need deeper evaluation.";
+    }
+
+document.getElementById("question-card").innerHTML = `
+        <h2>Your OMA Metabolic Pattern</h2>
+
+        <p><strong>Possible pattern:</strong> ${pattern}</p>
+
+        <p>
+        Your responses suggest symptom patterns that may be influenced by digestion,
+        meal timing, or physiological rhythm.
+        </p>
+
+        <p>
+        <strong>Your first OMA shift:</strong><br><br>
+        ${guidance}
+        </p>
+
+        <a href="https://rzp.io/rzp/RcQ2ZCt" class="button" style="background:#2D4A3E;">
+        Get My Detailed Metabolic Clarity Report — ₹99
+        </a>
+
+        <p style="margin-top:14px;font-size:0.9rem;color:#777;line-height:1.6;">
+        Includes deeper trigger analysis, symptom interpretation, food pattern mapping and first-step OMA shifts.
+        </p>
+    `;
+}
+</script>
+
+</body>
+</html>
