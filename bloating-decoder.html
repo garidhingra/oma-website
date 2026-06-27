@@ -112,7 +112,7 @@ Please consult a qualified healthcare provider for persistent symptoms.
 </p>
 
 
-<div class="card" id="question-card">
+<div class="card" id="question-card" style="display:none;">
 <h2>Question 1 of 5</h2>
 
 <p><strong>When do you usually feel bloated?</strong></p>
@@ -209,7 +209,10 @@ let currentQuestion = 0;
 let answers = [];
 
 function renderQuestion() {
-    const card = document.getElementById("question-card");
+    
+const card = document.getElementById("question-card");
+card.style.display = "block";
+
 
     const q = questions[currentQuestion];
 
@@ -343,6 +346,16 @@ document.getElementById("question-card").innerHTML = `
         <a href="https://wa.me/916280207272" class="button">
         Discuss My Gut Pattern
         </a>
+
+        <p style="margin:22px 0 12px;color:#777;">OR</p>
+
+        <a href="https://rzp.io/rzp/RcQ2ZCt" class="button" style="background:#A67C52;">
+        Get My Detailed Gut Pattern Report — ₹49
+        </a>
+
+        <p style="margin-top:14px;font-size:0.9rem;color:#777;line-height:1.6;">
+        Includes deeper trigger analysis, symptom interpretation, food pattern mapping and first-step OMA shifts.
+        </p>
     `;
 }
 </script>
