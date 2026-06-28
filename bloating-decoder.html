@@ -127,25 +127,32 @@ z-index:100;
 }
 
 
+
 .whatsapp-float{
 position:fixed;
 bottom:24px;
 right:24px;
+width:58px;
+height:58px;
 background:#25D366;
-color:white;
-padding:14px 20px;
-border-radius:999px;
-text-decoration:none;
-font-size:0.9rem;
-font-weight:600;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.18);
 z-index:999;
 transition:0.3s;
 }
 
-.whatsapp-float:hover{
-transform:translateY(-2px);
+.whatsapp-float img{
+width:28px;
+height:28px;
 }
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
 
 </style>
 </head>
@@ -291,25 +298,32 @@ z-index:100;
 }
 
 
+
 .whatsapp-float{
 position:fixed;
 bottom:24px;
 right:24px;
+width:58px;
+height:58px;
 background:#25D366;
-color:white;
-padding:14px 20px;
-border-radius:999px;
-text-decoration:none;
-font-size:0.9rem;
-font-weight:600;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.18);
 z-index:999;
 transition:0.3s;
 }
 
-.whatsapp-float:hover{
-transform:translateY(-2px);
+.whatsapp-float img{
+width:28px;
+height:28px;
 }
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
 
 </style>
 
@@ -533,11 +547,13 @@ document.getElementById("question-card").innerHTML = `
 
 
 
+
 <a href="https://wa.me/916280207272?text=Hi%20OMA%2C%20I%20want%20to%20understand%20which%20program%20is%20right%20for%20me."
    class="whatsapp-float"
    target="_blank">
-   Chat with OMA
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+
 
 </body>
 </html>
