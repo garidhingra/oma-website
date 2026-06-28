@@ -274,11 +274,29 @@ function submitToGoogle() {
         return;
     }
 
-    const pattern = answers.includes("After meals")
-        ? "Meal-linked fermentation pattern"
-        : answers.includes("By evening")
-        ? "Slow digestive motility pattern"
-        : "Hormone and rhythm-linked bloating pattern";
+    const pattern =
+answers.includes("Crash after lunch") ||
+answers.includes("Constant snacking") ||
+answers.includes("Strong cravings at night")
+? "Blood sugar dysregulation"
+
+: answers.includes("Exhausted by evening") ||
+answers.includes("Need caffeine to function") ||
+answers.includes("Anxious")
+? "Stress-metabolic"
+
+: answers.includes("Gaining despite eating carefully") ||
+answers.includes("Losing very slowly") ||
+answers.includes("Weight fluctuates often")
+? "Adaptive resistance"
+
+: answers.includes("Irregular periods") ||
+answers.includes("Hairfall") ||
+answers.includes("Acne") ||
+answers.includes("PMS")
+? "Hormonal-metabolic"
+
+: "Mixed metabolic pattern";
 
     const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScHW9am26MJy0WDADO5usRpLtD3Vz6JEg64vQukIhWH_TSmww/formResponse";
 
