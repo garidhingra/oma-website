@@ -127,24 +127,49 @@ p {
     max-width: 300px;
   }
 }
+
+.logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>
+
 </head>
 
 <body>
 
+
 <header>
-  <a href="index.html" class="logo-wrap" style="text-decoration:none;color:inherit;">
-  
-  <div style="font-size:18px; font-weight:500;">One Meal Apart</div>
-</a>
+  <div class="nav">
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/oma-logo.png" alt="OMA Logo" class="logo">
+      <span>One Meal Apart</span>
+    </a>
 
     <nav>
       <a href="index.html">Home</a>
       <a href="programs.html">Programs</a>
       <a href="about.html">About</a>
+      <a href="https://app.onemealapart.com/login" class="cta">Login</a>
     </nav>
   </div>
 </header>
+
 
 <div class="container">
 <h1>Assessment Received</h1>

@@ -132,14 +132,39 @@ footer a {
   }
 
 }
+
+.logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>
+
 </head>
 
 <body>
 
+
 <header>
   <div class="nav">
-    
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/oma-logo.png" alt="OMA Logo" class="logo">
+      <span>One Meal Apart</span>
+    </a>
 
     <nav>
       <a href="index.html">Home</a>
@@ -149,6 +174,7 @@ footer a {
     </nav>
   </div>
 </header>
+
 
 <section>
   <h1>About One Meal Apart</h1>
