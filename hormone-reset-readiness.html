@@ -483,31 +483,40 @@ function submitToGoogle() {
         pattern = "Mixed hormone adaptation pattern";
     }
 
-    const pattern =
-answers.includes("Crash after lunch") ||
-answers.includes("Constant snacking") ||
-answers.includes("Strong cravings at night")
-? "Blood sugar dysregulation"
+    
+    let pattern = "";
 
-: answers.includes("Exhausted by evening") ||
-answers.includes("Need caffeine to function") ||
-answers.includes("Anxious")
-? "Stress-metabolic"
+    if (
+        answers.includes("Delayed often") ||
+        answers.includes("Very irregular") ||
+        answers.includes("Acne") ||
+        answers.includes("Hairfall")
+    ) {
+        pattern = "Hormonal rhythm disruption";
+    }
 
-: answers.includes("Gaining despite eating carefully") ||
-answers.includes("Losing very slowly") ||
-answers.includes("Weight fluctuates often")
-? "Adaptive resistance"
+    else if (
+        answers.includes("Daily sugar cravings") ||
+        answers.includes("Weight gain") ||
+        answers.includes("Fatigue")
+    ) {
+        pattern = "Insulin-linked hormone resistance";
+    }
 
-: answers.includes("Irregular periods") ||
-answers.includes("Hairfall") ||
-answers.includes("Acne") ||
-answers.includes("PMS")
-? "Hormonal-metabolic"
+    else if (
+        answers.includes("Wake up tired") ||
+        answers.includes("Struggle falling asleep") ||
+        answers.includes("Anxiety") ||
+        answers.includes("Inflamed")
+    ) {
+        pattern = "Stress-cortisol overload pattern";
+    }
 
-: "Mixed metabolic pattern";
+    else {
+        pattern = "Mixed hormone adaptation pattern";
+    }
 
-    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSf8cvyzhQ5nXmAmxwTHykHGOz0BIjf7JLbN0j_3RqFtNhHn0g/formResponse";
+const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSf8cvyzhQ5nXmAmxwTHykHGOz0BIjf7JLbN0j_3RqFtNhHn0g/formResponse";
 
     const formData = new FormData();
     formData.append("entry.2073016579", name);
