@@ -494,75 +494,56 @@ answers.includes("PMS")
 
 
 
+
 function showSummary() {
     let pattern = "";
     let guidance = "";
 
     if (
-        answers.includes("Crash after lunch") ||
-        answers.includes("Constant snacking") ||
-        answers.includes("Strong cravings at night")
-    ) {
-        pattern = "Blood sugar dysregulation pattern";
-        guidance = "Your current responses suggest unstable energy regulation, hunger signaling and metabolic rhythm disruption.";
-    }
-
-    else if (
-        answers.includes("Exhausted by evening") ||
-        answers.includes("Need caffeine to function") ||
-        answers.includes("Anxious")
-    ) {
-        pattern = "Stress-linked metabolic resistance pattern";
-        guidance = "Your body may be carrying a higher physiological stress load affecting recovery and metabolism.";
-    }
-
-    else if (
-        answers.includes("Gaining despite eating carefully") ||
-        answers.includes("Losing very slowly") ||
-        answers.includes("Weight fluctuates often")
-    ) {
-        pattern = "Slow adaptive metabolism pattern";
-        guidance = "Your metabolism may be showing adaptive resistance influenced by meal timing, stress or recovery load.";
-    }
-
-    else if (
-        answers.includes("Irregular periods") ||
-        answers.includes("Hairfall") ||
+        answers.includes("Delayed often") ||
+        answers.includes("Very irregular") ||
         answers.includes("Acne") ||
-        answers.includes("PMS")
+        answers.includes("Hairfall")
     ) {
-        pattern = "Hormonal-metabolic disruption pattern";
-        guidance = "Your current responses may reflect deeper hormone-metabolism interactions requiring structured support.";
+        pattern = "Hormonal rhythm disruption";
+        guidance = "Your current responses suggest cycle irregularity and hormone rhythm imbalance that may be affecting metabolism, skin and recovery.";
+    }
+
+    else if (
+        answers.includes("Daily sugar cravings") ||
+        answers.includes("Weight gain") ||
+        answers.includes("Fatigue")
+    ) {
+        pattern = "Insulin-linked hormone resistance";
+        guidance = "Your responses suggest possible blood sugar instability influencing cravings, inflammation and hormone signaling.";
+    }
+
+    else if (
+        answers.includes("Wake up tired") ||
+        answers.includes("Struggle falling asleep") ||
+        answers.includes("Anxiety") ||
+        answers.includes("Inflamed")
+    ) {
+        pattern = "Stress-cortisol overload pattern";
+        guidance = "Your nervous system may be carrying a high stress load affecting recovery, sleep and hormonal balance.";
     }
 
     else {
-        pattern = "Mixed metabolic stress pattern";
-        guidance = "Your responses suggest overlapping metabolic signals that may need deeper evaluation.";
+        pattern = "Mixed hormone adaptation pattern";
+        guidance = "Your body may be showing overlapping hormone signals needing deeper pattern support.";
     }
 
 document.getElementById("question-card").innerHTML = `
-        <h2>Your OMA Metabolic Pattern</h2>
+<h2>Your Hormone Pattern Summary</h2>
+<p><strong>${pattern}</strong></p>
+<p>${guidance}</p>
 
-        <p><strong>Possible pattern:</strong> ${pattern}</p>
-
-        <p>
-        Your responses suggest symptom patterns that may be influenced by digestion,
-        meal timing, or physiological rhythm.
-        </p>
-
-        <p>
-        <strong>Your first OMA shift:</strong><br><br>
-        ${guidance}
-        </p>
-
-        <a href="https://rzp.io/rzp/bK7mjJs" class="button" style="background:#2D4A3E;">
-        Get My Detailed Metabolic Clarity Report — ₹99
-        </a>
-
-        <p style="margin-top:14px;font-size:0.9rem;color:#777;line-height:1.6;">
-        Includes metabolic blindspot mapping, energy regulation insights, hormone pattern observations and first-step OMA shifts.
-        </p>
-    `;
+<div style="margin-top:25px;">
+<a href="YOUR_PAYMENT_LINK_HERE" class="button">
+Get My Detailed Hormone Report — ₹149
+</a>
+</div>
+`;
 }
 </script>
 
