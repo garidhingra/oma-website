@@ -503,6 +503,7 @@ const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSf8cvyzhQ5nXmAmxwTHykH
 
 
 
+
 function showSummary() {
     let pattern = "";
     let guidance = "";
@@ -541,44 +542,16 @@ function showSummary() {
         guidance = "Your responses suggest multiple overlapping hormone, recovery and metabolic signals. This often means your body may need deeper pattern mapping before targeted correction.";
     }
 
-document.getElementById("question-card").innerHTML = `
-<h2>Your Hormone Pattern Summary</h2>
-<p><strong>${pattern}</strong></p>
-<p>${guidance}</p>
+    document.getElementById("question-card").innerHTML = `
+        <h2>Your Hormone Pattern Summary</h2>
+        <p><strong>${pattern}</strong></p>
+        <p>${guidance}</p>
 
-<div style="margin-top:25px;">
-<a href="https://rzp.io/rzp/ViNEvP1" class="button">
-Get My Detailed Hormone Report — ₹149
-</a>
-</div>
-`;
+        <div style="margin-top:25px;">
+            <a href="https://rzp.io/rzp/ViNEvP1" class="button">
+                Get My Detailed Hormone Report — ₹149
+            </a>
+        </div>
+    `;
 }
-</script>
-
-
-
-
-<footer>
-  <p>© 2026 One Meal Apart. All rights reserved.</p>
-  <div>
-    <a href="index.html">Home</a> |
-    <a href="programs.html">Programs</a> |
-    <a href="disclaimer.html">Medical Disclaimer</a> |
-    <a href="https://instagram.com/onemealapart">Instagram</a> |
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</footer>
-
-
-
-
-
-<a href="https://wa.me/916280207272?text=Hi%20OMA%2C%20I%20want%20to%20understand%20which%20program%20is%20right%20for%20me."
-   class="whatsapp-float"
-   target="_blank">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-
-</body>
-</html>
+>
