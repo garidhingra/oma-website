@@ -504,6 +504,7 @@ const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSf8cvyzhQ5nXmAmxwTHykH
 
 
 
+
 function showSummary() {
     let pattern = "";
     let guidance = "";
@@ -515,7 +516,7 @@ function showSummary() {
         answers.includes("Hairfall")
     ) {
         pattern = "Hormonal rhythm disruption";
-        guidance = "Your current responses suggest cycle irregularity and hormone rhythm imbalance that may be affecting metabolism, skin and recovery.";
+        guidance = "Your current responses suggest cycle irregularity and hormone rhythm imbalance affecting metabolism, skin and recovery.";
     }
 
     else if (
@@ -524,7 +525,7 @@ function showSummary() {
         answers.includes("Fatigue")
     ) {
         pattern = "Insulin-linked hormone resistance";
-        guidance = "Your responses suggest possible blood sugar instability influencing cravings, inflammation and hormone signaling.";
+        guidance = "Your responses suggest blood sugar instability influencing cravings, inflammation and hormone signaling.";
     }
 
     else if (
@@ -534,12 +535,12 @@ function showSummary() {
         answers.includes("Inflamed")
     ) {
         pattern = "Stress-cortisol overload pattern";
-        guidance = "Your nervous system may be carrying a high stress load affecting recovery, sleep and hormonal balance.";
+        guidance = "Your nervous system may be carrying a higher stress load affecting sleep, recovery and hormonal balance.";
     }
 
     else {
         pattern = "Mixed hormone adaptation pattern";
-        guidance = "Your responses suggest multiple overlapping hormone, recovery and metabolic signals. This often means your body may need deeper pattern mapping before targeted correction.";
+        guidance = "Your responses suggest overlapping hormone, recovery and metabolic signals needing deeper pattern support.";
     }
 
     document.getElementById("question-card").innerHTML = `
