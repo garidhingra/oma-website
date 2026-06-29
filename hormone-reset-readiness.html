@@ -451,6 +451,38 @@ function submitToGoogle() {
         return;
     }
 
+    let pattern = "";
+
+    if (
+        answers.includes("Delayed often") ||
+        answers.includes("Very irregular") ||
+        answers.includes("Acne") ||
+        answers.includes("Hairfall")
+    ) {
+        pattern = "Hormonal rhythm disruption";
+    }
+
+    else if (
+        answers.includes("Daily sugar cravings") ||
+        answers.includes("Weight gain") ||
+        answers.includes("Fatigue")
+    ) {
+        pattern = "Insulin-linked hormone resistance";
+    }
+
+    else if (
+        answers.includes("Wake up tired") ||
+        answers.includes("Struggle falling asleep") ||
+        answers.includes("Anxiety") ||
+        answers.includes("Inflamed")
+    ) {
+        pattern = "Stress-cortisol overload pattern";
+    }
+
+    else {
+        pattern = "Mixed hormone adaptation pattern";
+    }
+
     const pattern =
 answers.includes("Crash after lunch") ||
 answers.includes("Constant snacking") ||
