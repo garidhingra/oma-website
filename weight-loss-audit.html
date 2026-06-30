@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMA | Why Weight Isn’t Reducing Audit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: #F9F8F3;
+    font-family: Georgia, serif;
+    color: #4B5563;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    padding: 90px 24px;
+    text-align: center;
+}
+
+.logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #2D4A3E;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 28px;
+    background: #2D4A3E;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 400;
+}
+
+.card {
+    margin-top: 55px;
+    background: white;
+    padding: 36px;
+    border-radius: 24px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+    font-family: Georgia, serif;
+    color: #2D4A3E;
+    margin-bottom: 20px;
+}
+
+.card p {
+    line-height: 1.9;
+}
+
+.note {
+    margin-top: 28px;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+}
+
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:8px;
+text-decoration:none;
+color:#2F3A34;
+font-size:1rem;
+font-weight:500;
+}
+
+.logo{
+height:20px;
+width:auto;
+display:block;
+}
+
+.nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+
+nav{
+display:flex;
+gap:24px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#4B5563;
+font-size:0.95rem;
+}
+
+header{
+border-bottom:1px solid #EAECE8;
+background:#fff;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+
+
+.whatsapp-float{
+position:fixed;
+bottom:24px;
+right:24px;
+width:58px;
+height:58px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.18);
+z-index:999;
+transition:0.3s;
+}
+
+.whatsapp-float img{
+width:28px;
+height:28px;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/oma-logo.png" alt="OMA Logo" class="logo">
+      <span>One Meal Apart</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="programs.html">Programs</a>
+      <a href="about.html">About</a>
+      <a href="https://app.onemealapart.com/login" class="cta">Login</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<div class="container">
+
+
+
+<h1>Why Weight Isn’t Reducing</h1>
+
+<p class="subtitle">
+A guided symptom-based audit designed to uncover hidden metabolic, hormonal,
+digestive and behavioural blocks that may be slowing your fat loss.
+</p>
+
+
+
+<div class="card">
+<h2>What this audit uncovers</h2>
+
+<p>
+• Hidden reasons your weight may be stuck<br><br>
+• Metabolic, hormonal and digestive resistance patterns<br><br>
+• First-step shifts aligned with OMA fat loss principles
+</p>
+</div>
+
+<p class="note">
+This assessment is intended for educational purposes only and does not provide medical diagnosis or treatment.
+Please consult a qualified healthcare provider for persistent symptoms.
+</p>
+
+
+<div class="card" id="question-card" style="display:none;">
+<h2>Question 1 of 5</h2>
+
+<p><strong>What patterns have you been noticing in your body lately?</strong></p>
+
+<div class="options">
+<button>After meals</button>
+<button>By evening</button>
+<button>On waking up</button>
+<button>Around my periods</button>
+<button>Most of the day</button>
+</div>
+</div>
+
+<style>
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.options button {
+    padding: 16px;
+    border: 1px solid #D9DED7;
+    background: #fff;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+.options button:hover {
+    background: #F3F5F0;
+    border-color: #2D4A3E;
+}
+
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:8px;
+text-decoration:none;
+color:#2F3A34;
+font-size:1rem;
+font-weight:500;
+}
+
+.logo{
+height:20px;
+width:auto;
+display:block;
+}
+
+.nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+
+nav{
+display:flex;
+gap:24px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#4B5563;
+font-size:0.95rem;
+}
+
+header{
+border-bottom:1px solid #EAECE8;
+background:#fff;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+
+
+.whatsapp-float{
+position:fixed;
+bottom:24px;
+right:24px;
+width:58px;
+height:58px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.18);
+z-index:999;
+transition:0.3s;
+}
+
+.whatsapp-float img{
+width:28px;
+height:28px;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
+
+</style>
+
+</div>
+
+<script>
+
+const questions = [
+{
+question: "How long have you been trying to lose weight?",
+options: [
+"Less than 1 month",
+"1–3 months",
+"3–6 months",
+"More than 6 months"
+]
+},
+{
+question: "What best describes your progress?",
+options: [
+"Losing steadily",
+"Stuck despite effort",
+"Lose and regain",
+"Weight keeps increasing"
+]
+},
+{
+question: "How are your cravings?",
+options: [
+"Stable",
+"Evening sugar cravings",
+"Frequent snacking",
+"Strong emotional eating"
+]
+},
+{
+question: "How are your bowel movements?",
+options: [
+"Regular",
+"Constipated often",
+"Incomplete",
+"Bloating after meals"
+]
+},
+{
+question: "How do you wake up most days?",
+options: [
+"Fresh",
+"Tired",
+"Heavy body",
+"Low motivation"
+]
+},
+{
+question: "Do you relate to any of these?",
+options: [
+"Poor sleep",
+"High stress",
+"Irregular periods",
+"Hairfall"
+]
+}
+];
+
+
+let currentQuestion = 0;
+let answers = [];
+
+function renderQuestion() {
+    
+const card = document.getElementById("question-card");
+card.style.display = "block";
+
+
+    const q = questions[currentQuestion];
+
+    card.innerHTML = `
+        <h2>Question ${currentQuestion + 1} of ${questions.length}</h2>
+        <p><strong>${q.question}</strong></p>
+        <div class="options">
+            ${q.options.map(option => `
+                <button onclick="selectAnswer('${option}')">${option}</button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function selectAnswer(answer) {
+    answers.push(answer);
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        renderQuestion();
+    } else {
+        document.getElementById("question-card").innerHTML = `
+            <h2>Your assessment is ready</h2>
+            <p>Enter your details to receive your symptom summary and first-step guidance.</p>
+
+            <div class="options">
+                <input type="text" placeholder="Your Name" style="padding:14px;border:1px solid #ddd;border-radius:12px;">
+                <input type="email" placeholder="Email Address (Optional)" style="padding:14px;border:1px solid #ddd;border-radius:12px;">
+                <input type="text" required placeholder="WhatsApp Number *" style="padding:14px;border:1px solid #ddd;border-radius:12px;">
+                
+<button onclick="submitToGoogle()">Get My Summary</button>
+
+            </div>
+        `;
+    }
+}
+
+window.onload = renderQuestion;
+</script>
+
+
+<script>
+function submitToGoogle() {
+    const name = document.querySelector('input[placeholder="Your Name"]').value;
+    const whatsapp = document.querySelector('input[placeholder="WhatsApp Number *"]').value;
+
+    if (!name || !whatsapp) {
+        alert("Please fill your name and WhatsApp number.");
+        return;
+    }
+
+    const pattern =
+answers.includes("Stuck despite effort") ||
+answers.includes("Weight keeps increasing")
+? "Metabolic resistance"
+
+: answers.includes("Evening sugar cravings") ||
+answers.includes("Frequent snacking") ||
+answers.includes("Strong emotional eating")
+? "Blood sugar dysregulation"
+
+: answers.includes("Constipated often") ||
+answers.includes("Incomplete") ||
+answers.includes("Bloating after meals")
+? "Digestive slowdown"
+
+: answers.includes("Poor sleep") ||
+answers.includes("High stress")
+? "Stress recovery overload"
+
+: answers.includes("Irregular periods") ||
+answers.includes("Hairfall")
+? "Hormonal interference"
+
+: "Mixed weight-loss resistance";
+
+const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScHW9am26MJy0WDADO5usRpLtD3Vz6JEg64vQukIhWH_TSmww/formResponse";
+
+    const formData = new FormData();
+    formData.append("entry.2073016579", name);
+    formData.append("entry.636291043", whatsapp);
+    formData.append("entry.733801969", "Why Weight Isn’t Reducing Audit");
+    formData.append("entry.128895036", pattern);
+
+    fetch(formURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+    });
+
+    showSummary();
+}
+
+
+
+
+function showSummary() {
+    let pattern = "";
+    let guidance = "";
+
+    if (
+        answers.includes("Stuck despite effort") ||
+        answers.includes("Weight keeps increasing")
+    ) {
+        pattern = "Metabolic resistance pattern";
+        guidance = "Your body may be adapting against fat loss through slower output, poor recovery or hidden metabolic stress.";
+    }
+
+    else if (
+        answers.includes("Evening sugar cravings") ||
+        answers.includes("Frequent snacking") ||
+        answers.includes("Strong emotional eating")
+    ) {
+        pattern = "Blood sugar dysregulation pattern";
+        guidance = "Your hunger and craving signals may be unstable, making fat loss harder despite effort.";
+    }
+
+    else if (
+        answers.includes("Constipated often") ||
+        answers.includes("Incomplete") ||
+        answers.includes("Bloating after meals")
+    ) {
+        pattern = "Digestive slowdown pattern";
+        guidance = "Your digestion may be reducing metabolic efficiency, nutrient handling and fat loss consistency.";
+    }
+
+    else if (
+        answers.includes("Poor sleep") ||
+        answers.includes("High stress")
+    ) {
+        pattern = "Stress recovery overload pattern";
+        guidance = "Your nervous system may be carrying excess stress load, impacting recovery, cravings and fat loss.";
+    }
+
+    else if (
+        answers.includes("Irregular periods") ||
+        answers.includes("Hairfall")
+    ) {
+        pattern = "Hormonal interference pattern";
+        guidance = "Your body may be showing hormone-linked resistance affecting weight regulation and body composition.";
+    }
+
+    else {
+        pattern = "Mixed weight-loss resistance pattern";
+        guidance = "Your responses suggest overlapping metabolic, hormonal and behavioural blocks slowing progress.";
+    }
+
+document.getElementById("question-card").innerHTML = `
+        <h2>Your Weight Loss Resistance Pattern</h2>
+
+        <p><strong>Possible pattern:</strong> ${pattern}</p>
+
+        <p>
+        Your responses suggest hidden blocks that may be slowing fat loss despite effort.
+        </p>
+
+        <p>
+        <strong>Your first OMA shift:</strong><br><br>
+        ${guidance}
+        </p>
+
+        <a href="https://rzp.io/rzp/bK7mjJs" class="button" style="background:#2D4A3E;">
+        Get My Detailed Weight Audit — ₹99
+        </a>
+
+        <p style="margin-top:14px;font-size:0.9rem;color:#777;line-height:1.6;">
+        Includes hidden resistance mapping, metabolism blindspots, hormone flags and OMA’s first-step fat loss corrections.
+        </p>
+    `;
+}
+</script>
+
+
+
+
+<footer>
+  <p>© 2026 One Meal Apart. All rights reserved.</p>
+  <div>
+    <a href="index.html">Home</a> |
+    <a href="programs.html">Programs</a> |
+    <a href="disclaimer.html">Medical Disclaimer</a> |
+    <a href="https://instagram.com/onemealapart">Instagram</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+
+
+
+
+<a href="https://wa.me/916280207272?text=Hi%20OMA%2C%20I%20want%20to%20understand%20which%20program%20is%20right%20for%20me."
+   class="whatsapp-float"
+   target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+
+</body>
+</html>
